@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QrCode Generator</title>
+</head>
+<style>
+    *, *::after, *::before {
+        box-sizing: border-box;
+    }
+    div {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    ul li {
+        list-style: none;
+    }
+    header,
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #c4c4c4;
+    }
+    header a {
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+    header div {
+        border: 1px solid blueviolet;
+        border-radius: 10px;
+    }
+    header div p span {
+        color: blueviolet;
+    }
+    nav ul li {
+        display: inline;
+    }
+    
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        border: 1px solid #c4c4c4;
+        margin: 10px 0;
+        gap: 20px;
+
+    }
+    main div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        min-height: 300px;
+        min-width: 400px;
+    }
+    
+    form input {
+        font-size: ;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+    }
+    form p {
+        border: 1px solid #c4c4c4;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <header>
+        <div>
+            <a href="{% url 'home' %}"><p>Qr<span>Code</span>Generator</p></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">home</a></li>
+                <li><a href="{% url 'about' %}">about</a></li>
+            </ul>
+
+        </nav>
+        
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <div>copyright@2022.</div>
+        <div>All Rights Reserved.</div>
+    </footer>
+    
+</body>
+</html>
